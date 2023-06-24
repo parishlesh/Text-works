@@ -10,18 +10,19 @@ function App() {
     if (mode === "light") {
       setMode("dark");
       document.body.style.backgroundColor = "#010814";
-    } else {
+    }
+    else {
       setMode("light");
-      document.body.style.backgroundColor = "light";
+      document.body.style.backgroundColor = "white";
     }
   };
 
   return (
     <>
       <Navbar title="TextWorks" mode={mode} toggleMode={toggleMode} />
-      <div className="container my 3"  >
-        <Textform heading="Enter your text here:" mode={mode} />
-      </div>
+      
+    <Textform heading="Enter your text here:" mode={mode} />
+      
     </>
   );
 }

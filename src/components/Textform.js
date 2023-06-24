@@ -43,7 +43,7 @@ export default function Textform(props) {
           }
         });
         setWordCount(wordCount);
-    
+        //  eslint-disable-next-line
       }, );
     
 
@@ -51,7 +51,9 @@ export default function Textform(props) {
     const [wordCount, setWordCount] = useState(0);
     
     return (
-        <div className="container" style={{color:props.mode==='dark'?'white':'black'}}>
+        <div>
+
+        <div className="container my-3" style={{color:props.mode==='dark'?'white':'black'}}>
             <h6>{props.heading}</h6>
             <div className='mb-3'>
                 <textarea className="form-control" id="textbox" rows="5" onChange={handleOnChange} value={text} placeholder='Start typing...' ></textarea>
@@ -72,6 +74,7 @@ export default function Textform(props) {
                     <p>{text}</p>
                 </div>
             </div>
+        </div>
         </div>
     )
 }
