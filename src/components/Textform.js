@@ -21,6 +21,8 @@ export default function Textform(props) {
         let text = document.getElementById('textbox')
         text.select();
         navigator.clipboard.writeText(text.value);
+        props.showAlert("Copied to clipboard");
+
     }
     const extraspaceremoveclick =() =>{
         let newText = text.replace(/\s+/g,' ').trim();
@@ -51,7 +53,7 @@ export default function Textform(props) {
     const [wordCount, setWordCount] = useState(0);
     
     return (
-        <div>
+        
 
         <div className="container my-3" style={{color:props.mode==='dark'?'white':'black'}}>
             <h6>{props.heading}</h6>
@@ -75,6 +77,6 @@ export default function Textform(props) {
                 </div>
             </div>
         </div>
-        </div>
+        
     )
 }
