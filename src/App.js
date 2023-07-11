@@ -36,8 +36,8 @@ function App() {
     <>
       <Navbar title="TextWorks" mode={mode} toggleMode={toggleMode} />
       <Alert alert={alert}/>
-    {/* <Textform heading="Enter your text here:" mode={mode} showAlert={showAlert}/> */}
-    <About/>
+      <Textform heading="Enter your text here:" mode={mode} showAlert={showAlert}/>
+      <About/>
       
     </>
   );

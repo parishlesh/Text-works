@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 
 export default function About(props) {
   return (
-    <div className="container my-3" >
+    <div className="container my-3">
       <div className="accordion accordion-flush" id="accordionFlushExample">
   <div className="accordion-item">
     <h2 className="accordion-header">

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 
-
 export default function Textform(props) {
     const uppercaseclick = () => {
         // console.log("upper case clicked")
@@ -54,7 +53,6 @@ export default function Textform(props) {
     
     return (
         
-
         <div className="container my-3" style={{color:props.mode==='dark'?'white':'black'}}>
             <h6>{props.heading}</h6>
             <div className='mb-3'>
