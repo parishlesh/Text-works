@@ -3,6 +3,7 @@ import Alert from "./components/Alert";
 import Navbar from "./components/Navbar";
 import Textform from "./components/Textform";
 import React, { useState } from "react";
+import About from "./components/About";
 
 function App() {
   const [mode, setMode] = useState("light");
@@ -35,7 +36,8 @@ function App() {
     <>
       <Navbar title="TextWorks" mode={mode} toggleMode={toggleMode} />
       <Alert alert={alert}/>
-    <Textform heading="Enter your text here:" mode={mode} showAlert={showAlert}/>
+    {/* <Textform heading="Enter your text here:" mode={mode} showAlert={showAlert}/> */}
+    <About/>
       
     </>
   );
