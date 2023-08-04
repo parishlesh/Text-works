@@ -4,11 +4,8 @@ import Navbar from "./components/Navbar";
 import Textform from "./components/Textform";
 import React, { useState } from "react";
 import About from "./components/About";
-import { link } from 'react-router-dom';
 import {
-  BrowserRouter as router,
-  Switch,
-  Link,
+  BrowserRouter as Router,
   Route,
   Routes,
 } from "react-router-dom";
@@ -21,6 +18,7 @@ function App() {
     setAlert({
       message: message,
       type: type,
+      mode: mode,
     })
     setTimeout(() => {
       setAlert(null)
@@ -41,20 +39,19 @@ function App() {
   };
 
   return (
+      <div className="container">
        <Router>
       <Navbar title="TextWorks" mode={mode} toggleMode={toggleMode} />
       <Alert alert={alert}/>
-      <div className="container">
-      <switch>
-        <Route path="/about">
-          <About/>
+        <Routes>
+        <Route path="/about" element={<About/>}>
         </Route>
-        <Route path="/">
-        <Textform heading="Enter your text here:" mode={mode} showAlert={showAlert}/>
+        
+        <Route path="/" element={<Textform heading="Enter your text here:" mode={mode} showAlert={showAlert}/>}>
         </Route>
-      </switch>
-      </div>
+      </Routes>
       </Router>
+      </div>
   );
 }
 
